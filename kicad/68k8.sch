@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "68k8 SBC"
 Date "2021-07-16"
 Rev ""
@@ -928,141 +928,6 @@ Text Label 3600 10550 0    50   ~ 0
 A2
 Text Label 3600 10650 0    50   ~ 0
 A3
-$Comp
-L 74xx:74LS07 BUF1
-U 1 1 614D70EA
-P 20200 12950
-F 0 "BUF1" H 20200 13267 50  0000 C CNN
-F 1 "74LS07" H 20200 13176 50  0000 C CNN
-F 2 "" H 20200 12950 50  0001 C CNN
-F 3 "www.ti.com/lit/ds/symlink/sn74ls07.pdf" H 20200 12950 50  0001 C CNN
-	1    20200 12950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS07 BUF1
-U 2 1 614D7E5F
-P 20200 13600
-F 0 "BUF1" H 20200 13917 50  0000 C CNN
-F 1 "74LS07" H 20200 13826 50  0000 C CNN
-F 2 "" H 20200 13600 50  0001 C CNN
-F 3 "www.ti.com/lit/ds/symlink/sn74ls07.pdf" H 20200 13600 50  0001 C CNN
-	2    20200 13600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS07 BUF1
-U 3 1 614D93B5
-P 20450 14200
-F 0 "BUF1" H 20450 14517 50  0000 C CNN
-F 1 "74LS07" H 20450 14426 50  0000 C CNN
-F 2 "" H 20450 14200 50  0001 C CNN
-F 3 "www.ti.com/lit/ds/symlink/sn74ls07.pdf" H 20450 14200 50  0001 C CNN
-	3    20450 14200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	20500 12950 20650 12950
-Wire Wire Line
-	20500 13600 20650 13600
-Wire Wire Line
-	20650 12950 20650 12800
-Wire Wire Line
-	20650 12800 20800 12800
-Text GLabel 20800 12800 2    50   Input ~ 0
-RESET
-Text GLabel 20750 13600 2    50   Input ~ 0
-HALT
-Wire Wire Line
-	20650 13600 20750 13600
-Connection ~ 20650 13600
-$Comp
-L Timer:LM555xM U?
-U 1 1 61569D76
-P 18400 13450
-F 0 "U?" H 18400 14031 50  0000 L TNN
-F 1 "LM555xM" H 18400 13940 50  0000 L TNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 19250 13050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 19250 13050 50  0001 C CNN
-	1    18400 13450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6156DCD9
-P 18400 14100
-F 0 "#PWR?" H 18400 13850 50  0001 C CNN
-F 1 "GND" H 18405 13927 50  0000 C CNN
-F 2 "" H 18400 14100 50  0001 C CNN
-F 3 "" H 18400 14100 50  0001 C CNN
-	1    18400 14100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW?
-U 1 1 6156FADE
-P 17300 13250
-F 0 "SW?" H 17300 13535 50  0000 C CNN
-F 1 "SW_Push" H 17300 13444 50  0000 C CNN
-F 2 "" H 17300 13450 50  0001 C CNN
-F 3 "~" H 17300 13450 50  0001 C CNN
-	1    17300 13250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 6156CD1A
-P 18400 12750
-F 0 "#PWR?" H 18400 12600 50  0001 C CNN
-F 1 "VCC" H 18415 12923 50  0000 C CNN
-F 2 "" H 18400 12750 50  0001 C CNN
-F 3 "" H 18400 12750 50  0001 C CNN
-	1    18400 12750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 61618BC8
-P 17800 13950
-F 0 "C?" H 17915 13996 50  0000 L CNN
-F 1 "C" H 17915 13905 50  0000 L CNN
-F 2 "" H 17838 13800 50  0001 C CNN
-F 3 "~" H 17800 13950 50  0001 C CNN
-	1    17800 13950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	18400 13850 18400 14100
-Wire Wire Line
-	17100 14100 17100 13250
-Connection ~ 18400 14100
-Wire Wire Line
-	18900 13250 19300 13250
-Wire Wire Line
-	19300 13250 19300 12950
-Wire Wire Line
-	18900 13450 19300 13450
-Wire Wire Line
-	19300 13450 19300 13250
-Connection ~ 19300 13250
-Wire Wire Line
-	18900 13650 19300 13650
-Wire Wire Line
-	19300 13650 19300 13450
-Connection ~ 19300 13450
-$Comp
-L Device:C C?
-U 1 1 616C0EA1
-P 19300 13950
-F 0 "C?" H 19415 13996 50  0000 L CNN
-F 1 "C" H 19415 13905 50  0000 L CNN
-F 2 "" H 19338 13800 50  0001 C CNN
-F 3 "~" H 19300 13950 50  0001 C CNN
-	1    19300 13950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	18400 14100 19300 14100
 Text GLabel 1100 4100 0    50   Input ~ 0
 HALT
 Text GLabel 1100 4200 0    50   Input ~ 0
@@ -1071,17 +936,6 @@ Text GLabel 1100 3300 0    50   Input ~ 0
 E
 Text GLabel 3750 11150 0    50   Input ~ 0
 RESET
-$Comp
-L 74xx:74LS04 NOT1
-U 1 1 6101E3F3
-P 19600 13250
-F 0 "NOT1" H 19600 13567 50  0000 C CNN
-F 1 "74LS04" H 19600 13476 50  0000 C CNN
-F 2 "" H 19600 13250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 19600 13250 50  0001 C CNN
-	1    19600 13250
-	1    0    0    -1  
-$EndComp
 $Comp
 L 74xx:74LS04 NOT1
 U 2 1 6101FB07
@@ -1148,39 +1002,6 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4071bms-72bms
 	2    6000 5450
 	1    0    0    -1  
 $EndComp
-Connection ~ 19300 13650
-Wire Wire Line
-	19300 13650 19300 13800
-Wire Wire Line
-	19900 12950 19900 13250
-Connection ~ 19900 13250
-Wire Wire Line
-	19900 13250 19900 13600
-Connection ~ 17800 14100
-Wire Wire Line
-	17100 14100 17800 14100
-Wire Wire Line
-	17900 13450 17800 13450
-Wire Wire Line
-	17800 13450 17800 13800
-Wire Wire Line
-	17900 13650 17600 13650
-Wire Wire Line
-	17800 14100 18400 14100
-Wire Wire Line
-	20650 13600 20650 13050
-$Comp
-L power:VCC #PWR?
-U 1 1 61522293
-P 21700 12950
-F 0 "#PWR?" H 21700 12800 50  0001 C CNN
-F 1 "VCC" V 21715 13078 50  0000 L CNN
-F 2 "" H 21700 12950 50  0001 C CNN
-F 3 "" H 21700 12950 50  0001 C CNN
-	1    21700 12950
-	0    1    1    0   
-$EndComp
-Connection ~ 20650 12950
 $Comp
 L Interface_USB:MCP2221AxP U?
 U 1 1 6139CD40
@@ -2026,20 +1847,8 @@ Wire Wire Line
 	8000 8450 8000 8600
 Wire Wire Line
 	7500 8450 8000 8450
-Text GLabel 21300 13150 0    50   Input ~ 0
-PU_1
 Text GLabel 7900 9550 2    50   Input ~ 0
 PU_1
-Text GLabel 21300 13250 0    50   Input ~ 0
-PU_2
-Text GLabel 21300 13350 0    50   Input ~ 0
-PU_3
-Text GLabel 17850 13100 1    50   Input ~ 0
-PU_2
-Text GLabel 19300 12950 1    50   Input ~ 0
-PU_3
-Wire Wire Line
-	17600 12750 18400 12750
 Wire Wire Line
 	19850 4650 19950 4650
 Wire Wire Line
@@ -2050,27 +1859,6 @@ Text GLabel 9450 11700 0    50   Input ~ 0
 DS
 Text GLabel 10550 11700 2    50   Input ~ 0
 RESET
-$Comp
-L Device:R_Network08 RN?
-U 1 1 61C4E53B
-P 21500 13350
-F 0 "RN?" V 20883 13350 50  0000 C CNN
-F 1 "R_Network08" V 20974 13350 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP9" V 21975 13350 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 21500 13350 50  0001 C CNN
-	1    21500 13350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	20650 13050 21300 13050
-Wire Wire Line
-	20650 12950 21300 12950
-Text GLabel 21300 13450 0    50   Input ~ 0
-PU_4
-Text GLabel 21300 13550 0    50   Input ~ 0
-PU_5
-Text GLabel 21300 13650 0    50   Input ~ 0
-PU_6
 Text GLabel 900  2000 0    50   Input ~ 0
 MFP_IRQ
 Wire Wire Line
@@ -2518,18 +2306,6 @@ F 3 "~" H 7800 15550 50  0001 C CNN
 	1    7800 15550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	17500 13250 17850 13250
-Wire Wire Line
-	17850 13250 17850 13100
-Connection ~ 17850 13250
-Wire Wire Line
-	17850 13250 17900 13250
-Wire Wire Line
-	17600 13650 17600 12750
-Wire Wire Line
-	18400 12750 18400 13050
-Connection ~ 18400 12750
 $Comp
 L 74xx:74LS21 4AND
 U 1 1 6195BF26
@@ -2756,34 +2532,6 @@ Wire Wire Line
 	7450 15400 7800 15400
 Wire Wire Line
 	4950 15700 5350 15700
-Wire Bus Line
-	18100 4700 18100 5000
-Wire Bus Line
-	17400 900  17400 1300
-Wire Bus Line
-	3450 10250 3450 10650
-Wire Bus Line
-	9150 9300 9150 9800
-Wire Bus Line
-	4900 1600 4900 5000
-Wire Bus Line
-	7100 1600 7100 5000
-Wire Bus Line
-	9300 1600 9300 5000
-Wire Bus Line
-	3450 9350 3450 10150
-Wire Bus Line
-	3150 3900 3150 5000
-Wire Bus Line
-	10850 9400 10850 10200
-Wire Bus Line
-	3550 900  3550 2800
-Wire Bus Line
-	7400 900  7400 3200
-Wire Bus Line
-	5200 900  5200 3200
-Wire Bus Line
-	3200 900  3200 3500
 Connection ~ 5350 15700
 Wire Wire Line
 	5350 15700 5700 15700
@@ -2817,4 +2565,46 @@ F 3 "" H 4950 15700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 4950 15700
+$Sheet
+S 19200 11500 700  650 
+U 6110C011
+F0 "Reset_Logic" 50
+F1 "Reset_Logic.sch" 50
+$EndSheet
+Text HLabel 19900 11650 0    50   Input ~ 0
+HALT
+Text HLabel 19900 11750 0    50   Input ~ 0
+RESET
+Text GLabel 19900 11750 2    50   Input ~ 0
+RESET
+Text GLabel 19900 11650 2    50   Input ~ 0
+HALT
+Wire Bus Line
+	18100 4700 18100 5000
+Wire Bus Line
+	17400 900  17400 1300
+Wire Bus Line
+	3450 10250 3450 10650
+Wire Bus Line
+	9150 9300 9150 9800
+Wire Bus Line
+	4900 1600 4900 5000
+Wire Bus Line
+	7100 1600 7100 5000
+Wire Bus Line
+	9300 1600 9300 5000
+Wire Bus Line
+	3450 9350 3450 10150
+Wire Bus Line
+	3150 3900 3150 5000
+Wire Bus Line
+	10850 9400 10850 10200
+Wire Bus Line
+	3550 900  3550 2800
+Wire Bus Line
+	7400 900  7400 3200
+Wire Bus Line
+	5200 900  5200 3200
+Wire Bus Line
+	3200 900  3200 3500
 $EndSCHEMATC
