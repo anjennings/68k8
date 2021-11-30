@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer:LM555xM U?
+U 1 1 624C743E
+P 5800 4050
+AR Path="/624C743E" Ref="U?"  Part="1" 
+AR Path="/62497D60/624C743E" Ref="U?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/624C743E" Ref="U110"  Part="1" 
+F 0 "U110" H 5800 4631 50  0000 L TNN
+F 1 "LM555" H 5800 4540 50  0000 L TNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 6650 3650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 6650 3650 50  0001 C CNN
+	1    5800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 624C7444
+P 5800 4700
+AR Path="/624C7444" Ref="#PWR?"  Part="1" 
+AR Path="/62497D60/624C7444" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/624C7444" Ref="#PWR0136"  Part="1" 
+F 0 "#PWR0136" H 5800 4450 50  0001 C CNN
+F 1 "GND" H 5805 4527 50  0000 C CNN
+F 2 "" H 5800 4700 50  0001 C CNN
+F 3 "" H 5800 4700 50  0001 C CNN
+	1    5800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 624C744A
+P 3900 3850
+AR Path="/624C744A" Ref="SW?"  Part="1" 
+AR Path="/62497D60/624C744A" Ref="SW?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/624C744A" Ref="SW110"  Part="1" 
+F 0 "SW110" H 3900 4135 50  0000 C CNN
+F 1 "SW_Push" H 3900 4044 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H8.5mm" H 3900 4050 50  0001 C CNN
+F 3 "~" H 3900 4050 50  0001 C CNN
+	1    3900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 624C7456
+P 5200 4550
+AR Path="/624C7456" Ref="C?"  Part="1" 
+AR Path="/62497D60/624C7456" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/624C7456" Ref="C111"  Part="1" 
+F 0 "C111" H 5315 4596 50  0000 L CNN
+F 1 "10nF" H 5315 4505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 5238 4400 50  0001 C CNN
+F 3 "~" H 5200 4550 50  0001 C CNN
+	1    5200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4450 5800 4700
+Wire Wire Line
+	3700 4700 3700 3850
+Connection ~ 5800 4700
+Wire Wire Line
+	6300 4050 6700 4050
+Wire Wire Line
+	6300 4250 6700 4250
+Wire Wire Line
+	6700 4250 6700 4050
+$Comp
+L Device:C C?
+U 1 1 624C7467
+P 6700 4550
+AR Path="/624C7467" Ref="C?"  Part="1" 
+AR Path="/62497D60/624C7467" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/624C7467" Ref="C112"  Part="1" 
+F 0 "C112" H 6815 4596 50  0000 L CNN
+F 1 "10uF" H 6815 4505 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 6738 4400 50  0001 C CNN
+F 3 "~" H 6700 4550 50  0001 C CNN
+	1    6700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4700 6700 4700
+Connection ~ 6700 4250
+Wire Wire Line
+	6700 4250 6700 4400
+Wire Wire Line
+	5300 4050 5200 4050
+Wire Wire Line
+	5200 4050 5200 4400
+Wire Wire Line
+	5300 4250 5000 4250
+Wire Wire Line
+	5200 4700 5800 4700
+Wire Wire Line
+	5000 3350 5800 3350
+Wire Wire Line
+	5800 3350 5800 3650
+Text HLabel 6950 4050 2    50   Input ~ 0
+PU1
+Text HLabel 4700 3700 1    50   Input ~ 0
+RESET_IN
+$Comp
+L Device:C C?
+U 1 1 625B99BC
+P 7850 4200
+AR Path="/62497D60/625B99BC" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/625B99BC" Ref="C110"  Part="1" 
+F 0 "C110" H 7965 4246 50  0000 L CNN
+F 1 "22pF" H 7965 4155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 7888 4050 50  0001 C CNN
+F 3 "~" H 7850 4200 50  0001 C CNN
+	1    7850 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 625BC077
+P 7850 4350
+AR Path="/625BC077" Ref="#PWR?"  Part="1" 
+AR Path="/62497D60/625BC077" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/625BC077" Ref="#PWR0137"  Part="1" 
+F 0 "#PWR0137" H 7850 4100 50  0001 C CNN
+F 1 "GND" H 7855 4177 50  0000 C CNN
+F 2 "" H 7850 4350 50  0001 C CNN
+F 3 "" H 7850 4350 50  0001 C CNN
+	1    7850 4350
+	1    0    0    -1  
+$EndComp
+Text HLabel 6950 3850 2    50   Output ~ 0
+Reset
+Wire Wire Line
+	5000 4250 5000 3350
+Text Notes 5100 5400 0    50   ~ 0
+Power on Reset\nReset signal is active high\n
+$Comp
+L Device:C C?
+U 1 1 62633FFA
+P 4700 4500
+AR Path="/62633FFA" Ref="C?"  Part="1" 
+AR Path="/62497D60/62633FFA" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/62633FFA" Ref="C113"  Part="1" 
+F 0 "C113" H 4815 4546 50  0000 L CNN
+F 1 "100nF" H 4815 4455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 4738 4350 50  0001 C CNN
+F 3 "~" H 4700 4500 50  0001 C CNN
+	1    4700 4500
+	1    0    0    -1  
+$EndComp
+Connection ~ 5200 4700
+Wire Wire Line
+	4700 3700 4700 3850
+$Comp
+L power:+5V #PWR?
+U 1 1 61AE4790
+P 5800 3350
+AR Path="/61AAA478/61AE4790" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61AE4790" Ref="#PWR0138"  Part="1" 
+F 0 "#PWR0138" H 5800 3200 50  0001 C CNN
+F 1 "+5V" V 5815 3478 50  0000 L CNN
+F 2 "" H 5800 3350 50  0001 C CNN
+F 3 "" H 5800 3350 50  0001 C CNN
+	1    5800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61AE50F3
+P 7850 4050
+AR Path="/61AAA478/61AE50F3" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61AE50F3" Ref="#PWR0139"  Part="1" 
+F 0 "#PWR0139" H 7850 3900 50  0001 C CNN
+F 1 "+5V" V 7865 4178 50  0000 L CNN
+F 2 "" H 7850 4050 50  0001 C CNN
+F 3 "" H 7850 4050 50  0001 C CNN
+	1    7850 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4350 4700 3850
+Text Notes 5100 2650 0    50   ~ 10
+This page has been checked\n
+Wire Wire Line
+	6300 3850 6950 3850
+Wire Wire Line
+	6700 4050 6950 4050
+Connection ~ 6700 4050
+Connection ~ 4700 3850
+Wire Wire Line
+	4700 4650 4700 4700
+Wire Wire Line
+	4700 4700 5200 4700
+Wire Wire Line
+	4700 3850 5300 3850
+Wire Wire Line
+	4100 3850 4700 3850
+Wire Wire Line
+	3700 4700 4700 4700
+Connection ~ 4700 4700
+$EndSCHEMATC

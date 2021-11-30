@@ -1,0 +1,666 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface:68681 DART?
+U 1 1 61B12B27
+P 5300 4100
+AR Path="/61B12B27" Ref="DART?"  Part="1" 
+AR Path="/61B09B53/61B12B27" Ref="U300"  Part="1" 
+F 0 "U300" H 5300 5781 50  0000 R CNN
+F 1 "68681" H 5300 5690 50  0000 R CNN
+F 2 "Package_DIP:DIP-40_W15.24mm_LongPads" H 5300 4100 50  0001 C CNN
+F 3 "" H 5300 4100 50  0001 C CNN
+	1    5300 4100
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	4000 3800 4100 3900
+Entry Wire Line
+	4000 3700 4100 3800
+Entry Wire Line
+	4000 3600 4100 3700
+Entry Wire Line
+	4000 3500 4100 3600
+Entry Wire Line
+	4000 3400 4100 3500
+Entry Wire Line
+	4000 3300 4100 3400
+Entry Wire Line
+	4000 3200 4100 3300
+Entry Wire Line
+	4000 3100 4100 3200
+Wire Wire Line
+	4100 3200 4300 3200
+Wire Wire Line
+	4100 3300 4300 3300
+Wire Wire Line
+	4100 3400 4300 3400
+Wire Wire Line
+	4100 3500 4300 3500
+Wire Wire Line
+	4100 3600 4300 3600
+Wire Wire Line
+	4100 3700 4300 3700
+Wire Wire Line
+	4100 3800 4300 3800
+Wire Wire Line
+	4100 3900 4300 3900
+Text Label 4150 3200 0    50   ~ 0
+D0
+Text Label 4150 3300 0    50   ~ 0
+D1
+Text Label 4150 3400 0    50   ~ 0
+D2
+Text Label 4150 3500 0    50   ~ 0
+D3
+Text Label 4150 3600 0    50   ~ 0
+D4
+Text Label 4150 3700 0    50   ~ 0
+D5
+Text Label 4150 3800 0    50   ~ 0
+D6
+Text Label 4150 3900 0    50   ~ 0
+D7
+Wire Bus Line
+	4000 4400 3850 4400
+Entry Wire Line
+	4000 4000 4100 4100
+Entry Wire Line
+	4000 4100 4100 4200
+Entry Wire Line
+	4000 4200 4100 4300
+Entry Wire Line
+	4000 4300 4100 4400
+Wire Wire Line
+	4100 4100 4300 4100
+Wire Wire Line
+	4100 4200 4300 4200
+Wire Wire Line
+	4100 4300 4300 4300
+Wire Wire Line
+	4100 4400 4300 4400
+Text Label 4150 4100 0    50   ~ 0
+A1
+Text Label 4150 4200 0    50   ~ 0
+A2
+Text Label 4150 4300 0    50   ~ 0
+A3
+Text Label 4150 4400 0    50   ~ 0
+A4
+$Comp
+L Interface_USB:MCP2221AxP U?
+U 1 1 61B12B55
+P 8050 2800
+AR Path="/61B12B55" Ref="U?"  Part="1" 
+AR Path="/61B09B53/61B12B55" Ref="U301"  Part="1" 
+F 0 "U301" H 8050 2019 50  0000 R BNN
+F 1 "MCP2221AxP" H 8050 2110 50  0000 R BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 8050 3800 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005565B.pdf" H 8050 3500 50  0001 C CNN
+	1    8050 2800
+	-1   0    0    1   
+$EndComp
+Wire Bus Line
+	4000 3900 3850 3900
+$Comp
+L power:GND #PWR?
+U 1 1 61B12B65
+P 7950 4050
+AR Path="/61B12B65" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61B12B65" Ref="#PWR0144"  Part="1" 
+F 0 "#PWR0144" H 7950 3800 50  0001 C CNN
+F 1 "GND" H 7955 3877 50  0000 C CNN
+F 2 "" H 7950 4050 50  0001 C CNN
+F 3 "" H 7950 4050 50  0001 C CNN
+	1    7950 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B12B71
+P 8850 2350
+AR Path="/61B12B71" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61B12B71" Ref="#PWR0146"  Part="1" 
+F 0 "#PWR0146" H 8850 2100 50  0001 C CNN
+F 1 "GND" H 8855 2177 50  0000 C CNN
+F 2 "" H 8850 2350 50  0001 C CNN
+F 3 "" H 8850 2350 50  0001 C CNN
+	1    8850 2350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7650 3200
+NoConn ~ 7650 3300
+NoConn ~ 7650 2400
+NoConn ~ 7650 2500
+NoConn ~ 7650 2600
+NoConn ~ 7650 2700
+Wire Wire Line
+	8850 2200 8850 2350
+$Comp
+L Device:Crystal Y?
+U 1 1 61B12B80
+P 3000 3600
+AR Path="/61B12B80" Ref="Y?"  Part="1" 
+AR Path="/61B09B53/61B12B80" Ref="Y300"  Part="1" 
+F 0 "Y300" V 2954 3731 50  0000 L CNN
+F 1 "3.6864 MHz" V 3045 3731 50  0000 L CNN
+F 2 "Crystal:Crystal_HC18-U_Vertical" H 3000 3600 50  0001 C CNN
+F 3 "~" H 3000 3600 50  0001 C CNN
+	1    3000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61B12B86
+P 3250 3950
+AR Path="/61B12B86" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61B12B86" Ref="22pF2"  Part="1" 
+F 0 "22pF2" H 3365 3996 50  0000 L CNN
+F 1 "CX2" H 3365 3905 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3288 3800 50  0001 C CNN
+F 3 "~" H 3250 3950 50  0001 C CNN
+	1    3250 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61B12B8C
+P 2750 3950
+AR Path="/61B12B8C" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61B12B8C" Ref="22pF1"  Part="1" 
+F 0 "22pF1" H 2865 3996 50  0000 L CNN
+F 1 "CX1" H 2865 3905 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 2788 3800 50  0001 C CNN
+F 3 "~" H 2750 3950 50  0001 C CNN
+	1    2750 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B12B92
+P 3000 4150
+AR Path="/61B12B92" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61B12B92" Ref="#PWR0147"  Part="1" 
+F 0 "#PWR0147" H 3000 3900 50  0001 C CNN
+F 1 "GND" H 3005 3977 50  0000 C CNN
+F 2 "" H 3000 4150 50  0001 C CNN
+F 3 "" H 3000 4150 50  0001 C CNN
+	1    3000 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 4100 3000 4150
+$Comp
+L power:GND #PWR?
+U 1 1 61B12BC2
+P 5300 5500
+AR Path="/61B12BC2" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61B12BC2" Ref="#PWR0148"  Part="1" 
+F 0 "#PWR0148" H 5300 5250 50  0001 C CNN
+F 1 "GND" H 5305 5327 50  0000 C CNN
+F 2 "" H 5300 5500 50  0001 C CNN
+F 3 "" H 5300 5500 50  0001 C CNN
+	1    5300 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3750 7950 3500
+Text HLabel 3850 3900 0    50   BiDi ~ 0
+D[0..7]
+Text HLabel 3850 4400 0    50   Input ~ 0
+A[0..19]
+Text HLabel 4300 4700 0    50   Input ~ 0
+RW
+Text HLabel 4300 4800 0    50   Input ~ 0
+INTACK
+Text HLabel 4300 4900 0    50   Input ~ 0
+RESET
+Text HLabel 4300 5100 0    50   Output ~ 0
+DTACK
+Text HLabel 4300 5200 0    50   Output ~ 0
+IRQ
+Text HLabel 4300 4600 0    50   Input ~ 0
+CS
+$Sheet
+S 9750 4550 550  950 
+U 61C811A8
+F0 "330_SEEPROM" 50
+F1 "330_SEEPROM.sch" 50
+F2 "CS" I L 9750 4650 50 
+F3 "MOSI" I L 9750 4750 50 
+F4 "MISO" I L 9750 4850 50 
+F5 "SCLK" I L 9750 4950 50 
+F6 "PU1" I L 9750 5050 50 
+F7 "PU2" I L 9750 5150 50 
+F8 "RESET" O R 10300 4650 50 
+F9 "PD1" I L 9750 5250 50 
+F10 "PD2" I L 9750 5350 50 
+$EndSheet
+Text GLabel 9750 4950 0    50   Input ~ 0
+SCLK
+Text GLabel 9750 4750 0    50   Input ~ 0
+MOSI
+Text GLabel 9750 4850 0    50   Output ~ 0
+MISO
+Text GLabel 9750 4650 0    50   Input ~ 0
+ROM_CS
+$Sheet
+S 8400 4550 550  900 
+U 61C811B5
+F0 "320_SDCARD" 50
+F1 "320_SDCARD.sch" 50
+F2 "CS" I L 8400 4650 50 
+F3 "MOSI" I L 8400 4750 50 
+F4 "CLK" I L 8400 4850 50 
+F5 "MISO" O L 8400 4950 50 
+$EndSheet
+Text GLabel 6300 3500 2    50   Output ~ 0
+SCLK
+Text GLabel 6300 3600 2    50   Output ~ 0
+MOSI
+Text GLabel 6300 3700 2    50   Output ~ 0
+ROM_CS
+Text GLabel 6300 3800 2    50   Output ~ 0
+SD_CS
+Text GLabel 6300 4400 2    50   Input ~ 0
+MISO
+Text GLabel 8400 4950 0    50   Output ~ 0
+MISO
+Text GLabel 8400 4850 0    50   Input ~ 0
+SCLK
+Text GLabel 8400 4750 0    50   Input ~ 0
+MOSI
+Text GLabel 8400 4650 0    50   Input ~ 0
+SD_CS
+$Comp
+L power:+5V #PWR0149
+U 1 1 61CD6265
+P 5300 2600
+F 0 "#PWR0149" H 5300 2450 50  0001 C CNN
+F 1 "+5V" V 5315 2728 50  0000 L CNN
+F 2 "" H 5300 2600 50  0001 C CNN
+F 3 "" H 5300 2600 50  0001 C CNN
+	1    5300 2600
+	0    1    1    0   
+$EndComp
+Text GLabel 10250 1100 0    50   Input ~ 0
+USB_RST
+Text GLabel 8450 3300 2    50   Input ~ 0
+USB_RST
+Text GLabel 10250 1200 0    50   Input ~ 0
+SER_PU1
+Text GLabel 10250 1300 0    50   Input ~ 0
+SER_PU2
+Text GLabel 9750 5050 0    50   Input ~ 0
+SER_PU1
+Text GLabel 9750 5150 0    50   Input ~ 0
+SER_PU2
+$Comp
+L Connector:Conn_01x02_Male J300
+U 1 1 619CC537
+P 6500 3300
+F 0 "J300" H 6472 3182 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6472 3273 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6500 3300 50  0001 C CNN
+F 3 "~" H 6500 3300 50  0001 C CNN
+	1    6500 3300
+	-1   0    0    1   
+$EndComp
+Text Notes 4550 6500 0    50   ~ 0
+General peripherals:\n1 x UART -> USB bridge (Port A)\n1 x Generic UART (Port B)\n1 x SPI\n    - MicroSD Card for file storage\n    - Serial ROM for Bootstrap\n       - can be externally programmed\n4 x CS Lines
+$Comp
+L Device:C C?
+U 1 1 61AAA995
+P 7950 3900
+AR Path="/62497D60/61AAA995" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61AAA995" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61AAA995" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61AAA995" Ref="C7"  Part="1" 
+F 0 "C7" H 8065 3946 50  0000 L CNN
+F 1 "22pF" H 8065 3855 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 7988 3750 50  0001 C CNN
+F 3 "~" H 7950 3900 50  0001 C CNN
+	1    7950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0145
+U 1 1 61B075AE
+P 8050 3500
+F 0 "#PWR0145" H 8050 3350 50  0001 C CNN
+F 1 "+5V" H 8065 3673 50  0000 C CNN
+F 2 "" H 8050 3500 50  0001 C CNN
+F 3 "" H 8050 3500 50  0001 C CNN
+	1    8050 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0166
+U 1 1 61B078B4
+P 10650 1100
+F 0 "#PWR0166" H 10650 950 50  0001 C CNN
+F 1 "+5V" V 10665 1228 50  0000 L CNN
+F 2 "" H 10650 1100 50  0001 C CNN
+F 3 "" H 10650 1100 50  0001 C CNN
+	1    10650 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:USB_B J302
+U 1 1 61B09E36
+P 9600 2900
+F 0 "J302" H 9370 2797 50  0000 R CNN
+F 1 "USB_B" H 9370 2888 50  0000 R CNN
+F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 9750 2850 50  0001 C CNN
+F 3 " ~" H 9750 2850 50  0001 C CNN
+	1    9600 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9600 2200 9600 2500
+Wire Wire Line
+	9700 2200 9700 2500
+Connection ~ 9600 2200
+Wire Wire Line
+	9600 2200 9700 2200
+Wire Wire Line
+	8450 2800 9300 2800
+Wire Wire Line
+	8450 2900 9300 2900
+$Comp
+L Connector:Conn_01x03_Male J301
+U 1 1 61B125B3
+P 8800 3750
+F 0 "J301" H 8908 4031 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 8908 3940 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8800 3750 50  0001 C CNN
+F 3 "~" H 8800 3750 50  0001 C CNN
+	1    8800 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 3100 9300 3650
+Wire Wire Line
+	9300 3650 9000 3650
+Wire Wire Line
+	9000 3750 9000 3850
+$Comp
+L power:+5V #PWR0167
+U 1 1 61B1684D
+P 9000 3800
+F 0 "#PWR0167" H 9000 3650 50  0001 C CNN
+F 1 "+5V" H 9015 3973 50  0000 C CNN
+F 2 "" H 9000 3800 50  0001 C CNN
+F 3 "" H 9000 3800 50  0001 C CNN
+	1    9000 3800
+	0    1    1    0   
+$EndComp
+Connection ~ 8850 2200
+Wire Wire Line
+	8850 2200 9600 2200
+Wire Wire Line
+	8050 2200 8850 2200
+NoConn ~ 6300 4500
+NoConn ~ 6300 4600
+NoConn ~ 6300 4700
+NoConn ~ 6300 4800
+NoConn ~ 6300 4900
+$Comp
+L Device:R_Network04 RN300
+U 1 1 61A19BED
+P 10450 1300
+F 0 "RN300" V 10033 1300 50  0000 C CNN
+F 1 "10K" V 10124 1300 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 10725 1300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 10450 1300 50  0001 C CNN
+	1    10450 1300
+	0    1    1    0   
+$EndComp
+Text GLabel 6300 3000 2    50   Input ~ 0
+DART_RX
+Text GLabel 6300 2900 2    50   Output ~ 0
+DART_TX
+Text GLabel 7650 2900 0    50   Output ~ 0
+DART_RX
+Text GLabel 7650 3000 0    50   Input ~ 0
+DART_TX
+Text GLabel 7350 4650 0    50   Input ~ 0
+SCLK
+Text GLabel 7350 4750 0    50   Input ~ 0
+MOSI
+Text GLabel 7350 4850 0    50   Output ~ 0
+MISO
+Text GLabel 6300 3900 2    50   Output ~ 0
+AUX_CS1
+Text GLabel 6300 4000 2    50   Output ~ 0
+AUX_CS2
+Text GLabel 6300 4100 2    50   Output ~ 0
+AUX_CS3
+Text GLabel 6300 4200 2    50   Output ~ 0
+AUX_CS4
+Text GLabel 7350 4950 0    50   Input ~ 0
+AUX_CS1
+Text GLabel 7350 5050 0    50   Input ~ 0
+AUX_CS2
+Text GLabel 7350 5150 0    50   Input ~ 0
+AUX_CS3
+Text GLabel 7350 5250 0    50   Input ~ 0
+AUX_CS4
+$Comp
+L Connector_Generic:Conn_01x07 J303
+U 1 1 61A41108
+P 7550 4950
+F 0 "J303" H 7630 4992 50  0000 L CNN
+F 1 "Conn_01x07" H 7630 4901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 7550 4950 50  0001 C CNN
+F 3 "~" H 7550 4950 50  0001 C CNN
+	1    7550 4950
+	1    0    0    -1  
+$EndComp
+Text Notes 7000 6650 0    50   ~ 0
+This page has mostly been checked\n
+Text HLabel 10300 4650 2    50   Output ~ 0
+HEADER_RESET
+$Comp
+L Device:C C?
+U 1 1 61A839BF
+P 1400 5950
+AR Path="/62497D60/61A839BF" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61A839BF" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61A839BF" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61C811A8/61A839BF" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61A839BF" Ref="C300"  Part="1" 
+F 0 "C300" H 1515 5996 50  0000 L CNN
+F 1 "22pF" H 1515 5905 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 1438 5800 50  0001 C CNN
+F 3 "~" H 1400 5950 50  0001 C CNN
+	1    1400 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A839C5
+P 1400 6100
+AR Path="/61A839C5" Ref="#PWR?"  Part="1" 
+AR Path="/62497D60/61A839C5" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61A839C5" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61A839C5" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61C811A8/61A839C5" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61A839C5" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 1400 5850 50  0001 C CNN
+F 1 "GND" H 1405 5927 50  0000 C CNN
+F 2 "" H 1400 6100 50  0001 C CNN
+F 3 "" H 1400 6100 50  0001 C CNN
+	1    1400 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61A839CB
+P 1400 5800
+AR Path="/61B09B53/61C811A8/61A839CB" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61A839CB" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 1400 5650 50  0001 C CNN
+F 1 "+5V" V 1415 5928 50  0000 L CNN
+F 2 "" H 1400 5800 50  0001 C CNN
+F 3 "" H 1400 5800 50  0001 C CNN
+	1    1400 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61A84709
+P 1900 5950
+AR Path="/62497D60/61A84709" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61A84709" Ref="C?"  Part="1" 
+AR Path="/61B3CA17/61A84709" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61C811A8/61A84709" Ref="C?"  Part="1" 
+AR Path="/61B09B53/61A84709" Ref="C301"  Part="1" 
+F 0 "C301" H 2015 5996 50  0000 L CNN
+F 1 "22pF" H 2015 5905 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 1938 5800 50  0001 C CNN
+F 3 "~" H 1900 5950 50  0001 C CNN
+	1    1900 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A8470F
+P 1900 6100
+AR Path="/61A8470F" Ref="#PWR?"  Part="1" 
+AR Path="/62497D60/61A8470F" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61C5736B/61A8470F" Ref="#PWR?"  Part="1" 
+AR Path="/61B3CA17/61A8470F" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61C811A8/61A8470F" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61A8470F" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 1900 5850 50  0001 C CNN
+F 1 "GND" H 1905 5927 50  0000 C CNN
+F 2 "" H 1900 6100 50  0001 C CNN
+F 3 "" H 1900 6100 50  0001 C CNN
+	1    1900 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61A84715
+P 1900 5800
+AR Path="/61B09B53/61C811A8/61A84715" Ref="#PWR?"  Part="1" 
+AR Path="/61B09B53/61A84715" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 1900 5650 50  0001 C CNN
+F 1 "+5V" V 1915 5928 50  0000 L CNN
+F 2 "" H 1900 5800 50  0001 C CNN
+F 3 "" H 1900 5800 50  0001 C CNN
+	1    1900 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Network04 RN301
+U 1 1 61A8C33D
+P 8650 1300
+F 0 "RN301" V 8233 1300 50  0000 C CNN
+F 1 "2K" V 8324 1300 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 8925 1300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 1300 50  0001 C CNN
+	1    8650 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 61A8C9FB
+P 8850 1100
+F 0 "#PWR05" H 8850 850 50  0001 C CNN
+F 1 "GND" V 8855 972 50  0000 R CNN
+F 2 "" H 8850 1100 50  0001 C CNN
+F 3 "" H 8850 1100 50  0001 C CNN
+	1    8850 1100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8450 1100 0    50   Output ~ 0
+SER_PD1
+Text GLabel 8450 1200 0    50   Output ~ 0
+SER_PD2
+Text GLabel 9750 5250 0    50   Input ~ 0
+SER_PD1
+Text GLabel 9750 5350 0    50   Input ~ 0
+SER_PD2
+Wire Wire Line
+	3250 3800 3250 3600
+Wire Wire Line
+	3250 3600 3150 3600
+Wire Wire Line
+	2850 3600 2750 3600
+Wire Wire Line
+	2750 3600 2750 3800
+Wire Wire Line
+	2750 4100 3000 4100
+Connection ~ 3000 4100
+Wire Wire Line
+	3000 4100 3250 4100
+Wire Wire Line
+	2750 3600 2750 2900
+Wire Wire Line
+	2750 2900 4300 2900
+Connection ~ 2750 3600
+Wire Wire Line
+	3250 3600 3250 3000
+Connection ~ 3250 3600
+Wire Wire Line
+	3250 3000 4300 3000
+Text GLabel 10250 1400 0    50   Input ~ 0
+MISO
+$Comp
+L Device:LED D300
+U 1 1 61A5AE22
+P 7650 1150
+F 0 "D300" H 7643 895 50  0000 C CNN
+F 1 "LED" H 7643 986 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7650 1150 50  0001 C CNN
+F 3 "~" H 7650 1150 50  0001 C CNN
+	1    7650 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D301
+U 1 1 61A5B7DC
+P 7650 1550
+F 0 "D301" H 7643 1295 50  0000 C CNN
+F 1 "LED" H 7643 1386 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7650 1550 50  0001 C CNN
+F 3 "~" H 7650 1550 50  0001 C CNN
+	1    7650 1550
+	-1   0    0    1   
+$EndComp
+Text GLabel 7500 1150 0    50   Input ~ 0
+AUX_CS3
+Text GLabel 7500 1550 0    50   Input ~ 0
+AUX_CS4
+Wire Wire Line
+	7800 1150 7950 1150
+Wire Wire Line
+	7950 1150 7950 1300
+Wire Wire Line
+	7950 1300 8450 1300
+Wire Wire Line
+	7800 1550 7950 1550
+Wire Wire Line
+	7950 1400 8450 1400
+Wire Wire Line
+	7950 1550 7950 1400
+Wire Bus Line
+	4000 4000 4000 4400
+Wire Bus Line
+	4000 3100 4000 3900
+$EndSCHEMATC
