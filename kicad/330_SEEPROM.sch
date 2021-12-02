@@ -49,16 +49,8 @@ Wire Wire Line
 	6100 4350 5750 4350
 Text GLabel 5550 2950 2    50   Input ~ 0
 PROG_SCLK
-Text GLabel 3950 2450 0    50   Input ~ 0
-PROG_EN
 Text GLabel 4300 3850 0    50   Input ~ 0
 PROG_WP
-Wire Wire Line
-	3950 2450 4100 2450
-Wire Wire Line
-	3950 2550 4100 2550
-Wire Wire Line
-	4100 2550 4100 2450
 $Comp
 L 74xx:74LS126 U?
 U 1 1 623B8CDB
@@ -198,7 +190,7 @@ Wire Wire Line
 Connection ~ 4400 3850
 Wire Wire Line
 	4400 3850 4500 3850
-Text GLabel 5150 2650 2    50   Input ~ 0
+Text GLabel 4650 2650 0    50   Input ~ 0
 PROG_WP
 Text Notes 7200 5650 0    50   ~ 0
 Serial EEPROM Programmable via SPI programmer\nPROG_EN disables all signals to/from CPU and replaces with signals from external programmer\nIf PROG_EN is low, the CPU can not access chip\nThis should allow for remote programming without needing to remove EEPROM\nProgrammer can also force CPU reset\n\nWhen not programming, lines should be disconnected or set to Hi-Z on programmer
@@ -220,8 +212,6 @@ Text HLabel 3400 4050 0    50   Input ~ 0
 CS
 Text HLabel 6700 3100 2    50   Input ~ 0
 SCLK
-Text HLabel 3950 2550 0    50   Input ~ 0
-PU1
 Text HLabel 4500 3950 0    50   Input ~ 0
 PU2
 Text HLabel 7300 3950 2    50   Input ~ 0
@@ -252,34 +242,12 @@ F 3 "" H 4700 6450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6700 4350 6950 4350
-Text GLabel 5150 2350 2    50   Input ~ 0
+Text GLabel 4650 2450 0    50   Input ~ 0
 PROG_SCLK
-Text GLabel 5150 2450 2    50   Input ~ 0
+Text GLabel 5150 2650 2    50   Input ~ 0
 PROG_MOSI
-Text GLabel 5150 2550 2    50   Input ~ 0
+Text GLabel 5150 2450 2    50   Input ~ 0
 PROG_MISO
-$Comp
-L power:+5V #PWR0156
-U 1 1 619F2BF3
-P 4650 2650
-F 0 "#PWR0156" H 4650 2500 50  0001 C CNN
-F 1 "+5V" V 4665 2778 50  0000 L CNN
-F 2 "" H 4650 2650 50  0001 C CNN
-F 3 "" H 4650 2650 50  0001 C CNN
-	1    4650 2650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0157
-U 1 1 619F365E
-P 4650 2350
-F 0 "#PWR0157" H 4650 2100 50  0001 C CNN
-F 1 "GND" V 4655 2222 50  0000 R CNN
-F 2 "" H 4650 2350 50  0001 C CNN
-F 3 "" H 4650 2350 50  0001 C CNN
-	1    4650 2350
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 61AB04E0
@@ -366,13 +334,45 @@ F 3 "" H 6350 6300 50  0001 C CNN
 $EndComp
 Text Notes 7000 6650 0    50   ~ 10
 This page has been checked\n
-Connection ~ 4100 2450
-Wire Wire Line
-	4100 2450 4650 2450
-Text HLabel 4650 2550 0    50   Output ~ 0
-RESET
 Text HLabel 4400 3500 1    50   Input ~ 0
 PD1
 Text HLabel 4400 4400 3    50   Input ~ 0
 PD2
+Text HLabel 4650 2550 0    50   Output ~ 0
+RESET
+Wire Wire Line
+	5700 2350 5150 2350
+Connection ~ 5700 2350
+$Comp
+L power:GND #PWR0157
+U 1 1 619F365E
+P 4650 2350
+F 0 "#PWR0157" H 4650 2100 50  0001 C CNN
+F 1 "GND" V 4655 2222 50  0000 R CNN
+F 2 "" H 4650 2350 50  0001 C CNN
+F 3 "" H 4650 2350 50  0001 C CNN
+	1    4650 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0156
+U 1 1 619F2BF3
+P 5150 2550
+F 0 "#PWR0156" H 5150 2400 50  0001 C CNN
+F 1 "+5V" V 5165 2678 50  0000 L CNN
+F 2 "" H 5150 2550 50  0001 C CNN
+F 3 "" H 5150 2550 50  0001 C CNN
+	1    5150 2550
+	0    1    1    0   
+$EndComp
+Text HLabel 5850 2250 2    50   Input ~ 0
+PU1
+Wire Wire Line
+	5700 2250 5700 2350
+Wire Wire Line
+	5850 2250 5700 2250
+Wire Wire Line
+	5850 2350 5700 2350
+Text GLabel 5850 2350 2    50   Input ~ 0
+PROG_EN
 $EndSCHEMATC
