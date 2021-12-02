@@ -455,9 +455,9 @@ Text GLabel 7350 4950 0    50   Input ~ 0
 AUX_CS1
 Text GLabel 7350 5050 0    50   Input ~ 0
 AUX_CS2
-Text GLabel 7050 5150 0    50   Input ~ 0
+Text GLabel 7350 5150 0    50   Input ~ 0
 AUX_CS3
-Text GLabel 7050 5350 0    50   Input ~ 0
+Text GLabel 7350 5250 0    50   Input ~ 0
 AUX_CS4
 $Comp
 L Connector_Generic:Conn_01x07 J303
@@ -569,61 +569,33 @@ $EndComp
 $Comp
 L Device:R_Network04 RN301
 U 1 1 61A8C33D
-P 10450 2050
-F 0 "RN301" V 10033 2050 50  0000 C CNN
-F 1 "2K" V 10124 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP5" V 10725 2050 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 10450 2050 50  0001 C CNN
-	1    10450 2050
+P 8650 1300
+F 0 "RN301" V 8233 1300 50  0000 C CNN
+F 1 "2K" V 8324 1300 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 8925 1300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 1300 50  0001 C CNN
+	1    8650 1300
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 61A8C9FB
-P 10650 1850
-F 0 "#PWR05" H 10650 1600 50  0001 C CNN
-F 1 "GND" V 10655 1722 50  0000 R CNN
-F 2 "" H 10650 1850 50  0001 C CNN
-F 3 "" H 10650 1850 50  0001 C CNN
-	1    10650 1850
+P 8850 1100
+F 0 "#PWR05" H 8850 850 50  0001 C CNN
+F 1 "GND" V 8855 972 50  0000 R CNN
+F 2 "" H 8850 1100 50  0001 C CNN
+F 3 "" H 8850 1100 50  0001 C CNN
+	1    8850 1100
 	0    -1   -1   0   
 $EndComp
-Text GLabel 10250 1850 0    50   Output ~ 0
+Text GLabel 8450 1100 0    50   Output ~ 0
 SER_PD1
-Text GLabel 10250 1950 0    50   Output ~ 0
+Text GLabel 8450 1200 0    50   Output ~ 0
 SER_PD2
-Text GLabel 10250 2050 0    50   Output ~ 0
-LED_PD1
-Text GLabel 10250 2150 0    50   Output ~ 0
-LED_PD2
 Text GLabel 9750 5250 0    50   Input ~ 0
 SER_PD1
 Text GLabel 9750 5350 0    50   Input ~ 0
 SER_PD2
-Text GLabel 7050 5250 0    50   Input ~ 0
-LED_PD1
-Text GLabel 7050 5450 0    50   Input ~ 0
-LED_PD2
-Wire Wire Line
-	7050 5250 7150 5250
-Wire Wire Line
-	7150 5250 7150 5150
-Wire Wire Line
-	7150 5150 7350 5150
-Wire Wire Line
-	7050 5150 7150 5150
-Connection ~ 7150 5150
-Wire Wire Line
-	7350 5250 7250 5250
-Wire Wire Line
-	7250 5250 7250 5350
-Wire Wire Line
-	7250 5450 7050 5450
-Wire Wire Line
-	7050 5350 7250 5350
-Connection ~ 7250 5350
-Wire Wire Line
-	7250 5350 7250 5450
 Wire Wire Line
 	3250 3800 3250 3600
 Wire Wire Line
@@ -649,6 +621,44 @@ Wire Wire Line
 	3250 3000 4300 3000
 Text GLabel 10250 1400 0    50   Input ~ 0
 MISO
+$Comp
+L Device:LED D300
+U 1 1 61A5AE22
+P 7650 1150
+F 0 "D300" H 7643 895 50  0000 C CNN
+F 1 "LED" H 7643 986 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7650 1150 50  0001 C CNN
+F 3 "~" H 7650 1150 50  0001 C CNN
+	1    7650 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D301
+U 1 1 61A5B7DC
+P 7650 1550
+F 0 "D301" H 7643 1295 50  0000 C CNN
+F 1 "LED" H 7643 1386 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7650 1550 50  0001 C CNN
+F 3 "~" H 7650 1550 50  0001 C CNN
+	1    7650 1550
+	-1   0    0    1   
+$EndComp
+Text GLabel 7500 1150 0    50   Input ~ 0
+AUX_CS3
+Text GLabel 7500 1550 0    50   Input ~ 0
+AUX_CS4
+Wire Wire Line
+	7800 1150 7950 1150
+Wire Wire Line
+	7950 1150 7950 1300
+Wire Wire Line
+	7950 1300 8450 1300
+Wire Wire Line
+	7800 1550 7950 1550
+Wire Wire Line
+	7950 1400 8450 1400
+Wire Wire Line
+	7950 1550 7950 1400
 Wire Bus Line
 	4000 4000 4000 4400
 Wire Bus Line
