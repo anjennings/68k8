@@ -190,7 +190,7 @@ Wire Wire Line
 Connection ~ 4400 3850
 Wire Wire Line
 	4400 3850 4500 3850
-Text GLabel 5150 2650 2    50   Input ~ 0
+Text GLabel 4650 2650 0    50   Input ~ 0
 PROG_WP
 Text Notes 7200 5650 0    50   ~ 0
 Serial EEPROM Programmable via SPI programmer\nPROG_EN disables all signals to/from CPU and replaces with signals from external programmer\nIf PROG_EN is low, the CPU can not access chip\nThis should allow for remote programming without needing to remove EEPROM\nProgrammer can also force CPU reset\n\nWhen not programming, lines should be disconnected or set to Hi-Z on programmer
@@ -244,7 +244,7 @@ Wire Wire Line
 	6700 4350 6950 4350
 Text GLabel 4650 2450 0    50   Input ~ 0
 PROG_SCLK
-Text GLabel 4650 2650 0    50   Input ~ 0
+Text GLabel 5150 2650 2    50   Input ~ 0
 PROG_MOSI
 Text GLabel 5150 2450 2    50   Input ~ 0
 PROG_MISO

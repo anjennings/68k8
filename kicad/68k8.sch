@@ -125,19 +125,6 @@ Wire Bus Line
 Text GLabel 3200 3850 2    50   Output ~ 0
 FC2
 $Comp
-L Connector:Barrel_Jack J?
-U 1 1 619B3A6D
-P 2150 6200
-AR Path="/619AAD15/619B3A6D" Ref="J?"  Part="1" 
-AR Path="/619B3A6D" Ref="J0"  Part="1" 
-F 0 "J0" H 2207 6525 50  0000 C CNN
-F 1 "Barrel_Jack" H 2207 6434 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 2200 6160 50  0001 C CNN
-F 3 "~" H 2200 6160 50  0001 C CNN
-	1    2150 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_Linear:L7805 U?
 U 1 1 619B3A73
 P 4600 7000
@@ -216,8 +203,6 @@ F 3 "" H 4600 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 6100 3600 6100
-Wire Wire Line
 	3600 6100 3600 7000
 Wire Wire Line
 	3600 7000 4050 7000
@@ -227,14 +212,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 619B3A9C
-P 2450 6300
+P 1450 6300
 AR Path="/619AAD15/619B3A9C" Ref="#PWR?"  Part="1" 
 AR Path="/619B3A9C" Ref="#PWR0105"  Part="1" 
-F 0 "#PWR0105" H 2450 6050 50  0001 C CNN
-F 1 "GND" H 2455 6127 50  0000 C CNN
-F 2 "" H 2450 6300 50  0001 C CNN
-F 3 "" H 2450 6300 50  0001 C CNN
-	1    2450 6300
+F 0 "#PWR0105" H 1450 6050 50  0001 C CNN
+F 1 "GND" H 1455 6127 50  0000 C CNN
+F 2 "" H 1450 6300 50  0001 C CNN
+F 3 "" H 1450 6300 50  0001 C CNN
+	1    1450 6300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -429,5 +414,78 @@ F 2 "MountingHole:MountingHole_4mm" H 7900 5850 50  0001 C CNN
 F 3 "~" H 7900 5850 50  0001 C CNN
 	1    7900 5850
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack_Switch J00
+U 1 1 61AB1FC5
+P 1150 6200
+F 0 "J00" H 1207 6517 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 1207 6426 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1200 6160 50  0001 C CNN
+F 3 "~" H 1200 6160 50  0001 C CNN
+	1    1150 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 6200 1450 6300
+Connection ~ 1450 6300
+Wire Wire Line
+	1450 6100 2200 6100
+$Comp
+L Device:LED D0
+U 1 1 61AC5F5F
+P 6250 6650
+F 0 "D0" H 6243 6395 50  0000 C CNN
+F 1 "POW_LED" H 6243 6486 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 6250 6650 50  0001 C CNN
+F 3 "~" H 6250 6650 50  0001 C CNN
+	1    6250 6650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R0
+U 1 1 61AC656B
+P 5950 6650
+F 0 "R0" V 6157 6650 50  0000 C CNN
+F 1 "2K" V 6066 6650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 5880 6650 50  0001 C CNN
+F 3 "~" H 5950 6650 50  0001 C CNN
+	1    5950 6650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61AC930C
+P 5800 6650
+AR Path="/619AAD15/61AC930C" Ref="#PWR?"  Part="1" 
+AR Path="/61AC930C" Ref="#PWR0151"  Part="1" 
+F 0 "#PWR0151" H 5800 6500 50  0001 C CNN
+F 1 "+5V" V 5815 6778 50  0000 L CNN
+F 2 "" H 5800 6650 50  0001 C CNN
+F 3 "" H 5800 6650 50  0001 C CNN
+	1    5800 6650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0152
+U 1 1 61AC9631
+P 6400 6650
+F 0 "#PWR0152" H 6400 6400 50  0001 C CNN
+F 1 "GND" V 6405 6522 50  0000 R CNN
+F 2 "" H 6400 6650 50  0001 C CNN
+F 3 "" H 6400 6650 50  0001 C CNN
+	1    6400 6650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 61AC212B
+P 3450 6100
+F 0 "D?" H 3450 5883 50  0000 C CNN
+F 1 "D" H 3450 5974 50  0000 C CNN
+F 2 "" H 3450 6100 50  0001 C CNN
+F 3 "~" H 3450 6100 50  0001 C CNN
+	1    3450 6100
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
