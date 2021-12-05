@@ -1,26 +1,17 @@
+GAL Logic
+https://hackaday.com/tag/galasm/
 
-Hanle PS/2 Keyboard via UART with custom buad rate?
+Bill of Materials
+Take stock of existing parts
 
-Does UART need pullup resistors?
+Solder Flux
 
-Test VGA routine before assembly?
+Helping Hands
 
-Assembler/Linker/Compiler?
+BIOS and Drivers
 
-Kicad Symbol Tutorial
+Arduino SPI logic
 
-Kicad PCB Tutorial
+FUZIX
 
-Do all symbols match parts on hand?
-
-Will interAck conflict with high ram?
-
-Glue logic timing?
-
-Memory timing (DTACK always low?)
-
-Peripheral control signals
-
-Arduino SD Card compatability?
-
-Extra CPU control signals (what does E/VPA do?)
+CP/M Video
