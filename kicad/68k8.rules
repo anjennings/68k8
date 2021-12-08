@@ -1,0 +1,90 @@
+
+(rules PCB 68k8
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 17427)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND +3V3 +5V "Net-(22pF1-Pad2)" "Net-(22pF2-Pad2)" VCC "Net-(C7-Pad1)" "Net-(C111-Pad1)"
+    "555_01" "RESET_IN" CLK "Net-(J300-Pad1)" "Net-(J300-Pad2)" "Net-(J301-Pad1)" "Net-(J301-Pad2)" "Net-(J302-Pad2)"
+    "Net-(J302-Pad3)" SCLK MOSI MISO "AUX_CS1" "AUX_CS2" "AUX_CS3" "AUX_CS4"
+    "Net-(J320-Pad1)" "Net-(J320-Pad8)" "Net-(J320-Pad2)" "Net-(J320-Pad3)" "Net-(J320-Pad5)" "Net-(J320-Pad7)" "PROG_EN" "PROG_SCLK"
+    "PROG_MOSI" "PROG_MISO" "PROG_WP" BERR BR "DART_IRQ" IP1 HALT
+    RESET VPA "Net-(RN1-Pad11)" "SER_PU2" "USB_RST" "SER_PD2" "Net-(RN320-Pad6)" "/100_CPU/A3"
+    "/100_CPU/A4" "/100_CPU/A5" "/100_CPU/A6" "/100_CPU/A7" "/100_CPU/A8" "Net-(U100-Pad38)" "/100_CPU/A9" "/100_CPU/A10"
+    "/100_CPU/A11" "/100_CPU/A12" "/100_CPU/A13" FC2 "/100_CPU/A14" FC1 FC0 "/100_CPU/A15"
+    "/100_CPU/A0" "/100_CPU/A1" "/100_CPU/A16" "/100_CPU/A2" "/100_CPU/A17" "/100_CPU/A18" "/100_CPU/A19" "/100_CPU/D7"
+    "/100_CPU/D6" "/100_CPU/D5" "/100_CPU/D4" "/100_CPU/D3" "/100_CPU/D2" "/100_CPU/D1" "/100_CPU/D0" AS
+    DS RW DTACK "Net-(U100-Pad32)" "SD_CS" "Net-(U101-Pad1)" "Net-(U102-Pad12)" "Net-(U102-Pad13)"
+    "/100_CPU/110_RESET/Reset" "Net-(U102-Pad14)" "Net-(U102-Pad15)" INTACK WRITE "Net-(U102-Pad9)" READ "HRAM_SEL"
+    "LRAM_SEL" "ROM_SEL" "Net-(U300-Pad2)" "Net-(U300-Pad4)" "ROM_CS" "DART_DTACK" "DART_TX" "DART_RX"
+    "IO1_SEL" "Net-(U300-Pad36)" "Net-(U300-Pad38)" "Net-(U300-Pad39)" "Net-(U301-Pad8)" "Net-(U301-Pad2)" "Net-(U301-Pad9)" "Net-(U301-Pad3)"
+    "Net-(U301-Pad10)" "Net-(U301-Pad7)" "Net-(U400-Pad14)" "Net-(U400-Pad13)" "Net-(U400-Pad12)" "Net-(CLK1-Pad1)" "Net-(D300-Pad1)" "Net-(D301-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
