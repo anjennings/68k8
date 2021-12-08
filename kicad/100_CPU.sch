@@ -719,8 +719,8 @@ Text HLabel 3000 5450 0    50   Input ~ 0
 FC2
 Text HLabel 3000 5550 0    50   Input ~ 0
 AS
-Text Notes 4900 1550 0    50   ~ 0
-This page has NOT been checked\n
+Text Notes 4900 1550 0    50   ~ 10
+This page has been checked\n
 NoConn ~ 10100 3450
 Text HLabel 10100 3550 2    50   BiDi ~ 0
 RESET_IN

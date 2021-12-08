@@ -360,8 +360,8 @@ Wire Bus Line
 	3900 4350 3900 4800
 Text GLabel 8900 4150 2    50   Output ~ 0
 DTACK
-Text Notes 5150 2400 0    50   ~ 0
-This page has NOT been checked\n
+Text Notes 5150 2400 0    50   ~ 10
+This page has been checked\n
 Text GLabel 3200 4350 2    50   BiDi ~ 0
 RESET_IN
 Text GLabel 6700 4350 2    50   BiDi ~ 0
