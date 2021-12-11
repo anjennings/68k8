@@ -12,7 +12,7 @@
 START   ORG $00000
 
 * Vector Table
-START   ds.l    $80000     Used to initialize the stack pointer.
+START   ds.l    $90000     Used to initialize the stack pointer.
 RESET   ds.l    $01000     Reset/Startup
 BUSER   ds.l    $00800     Bus Error
 ADRER   ds.l    $00800     Address Error
@@ -93,7 +93,6 @@ newLine movem.l d0/a1,-(a7) push d0 & a1
     movem.l (a7)+,d0/a1 restore d0 & a1
     rts                 return
 
-
 *------------------------------------
 * Variable storage and strings
 * ds (define storage) is used to reserve memory for variables
@@ -105,13 +104,4 @@ textD3  dc.b    'D3 contains: ',0   null terminated string
 textEnd dc.b    'Program End',$d,$a,0   null terminated string
 crlf    dc.b    $d,$a,0     carriage return & line feed, null
 
-    END     START   end of program with start address specified
-
-
-
-
-
-*~Font name~Courier New~
-*~Font size~10~
-*~Tab type~1~
-*~Tab size~4~
+    END     START   end of program with start address
