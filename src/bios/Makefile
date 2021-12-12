@@ -1,8 +1,8 @@
-AS=/home/aidan/EASy68K-asm/ASM68Kv5.15.4/asy68k
+AS=/home/aidan/vasm/vasmm68k_std #EASy68K-asm/ASM68Kv5.15.4/asy68k
 FILE = main
 
 all:
-	$(AS) $(FILE).X68
+	$(AS) $(FILE).s
 
 clean:
-	rm -f $(FILE).L68 $(FILE).S68
+	rm -f $(FILE).L68 $(FILE).S68 a.out
