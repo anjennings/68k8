@@ -33,7 +33,7 @@
 .equ	REG_ROP_CMD,	PERP_BASE + 0x1E
 
 ### --- Reset Table Vectors --- ###
-.equ	INIT_SP,	0x90000
+.equ	INIT_SP,	0xB0000
 .equ	RESET_V,	0x01000
 .equ	GEN_V,		0x00800
 
@@ -47,7 +47,7 @@
 ### --- Begin BIOS --- ###
 
 .org RESET_V
-	rts
+	
 
 INIT_UART:
 
@@ -55,27 +55,29 @@ INIT_UART:
 	MOVE.B 0x00, (REG_IMR)
 
 	; Set OPCR
-	MOVE.B 0x00, (REG_OPCR)
+	; MOVE.B 0x00, (REG_OPCR)
 
 	; Set output port to all high but pin 7
-	MOVE.B 0xFE, (PERP_SOP_CMD)
-	MOVE.B 0x01, (PERP_ROP_CMD)
+	MOVE.B 0xAA, (REG_SOP_CMD)
+	MOVE.B 0x55, (REG_ROP_CMD)
 
 	; Set CRA, Reset MRA pointer, Enable TX/RX A
-	MOVE.B 0x15, (REG_CRA)	;0001 0101
+	;MOVE.B 0x15, (REG_CRA)	;0001 0101
 
 	; SET MRA 1/2, no parity, 8 bit, normal mode, 1 stop bit
-	MOVE.B 0x53, (REG_MRA) 	;0101 0011
-	MOVE.B 0x53, (REG_MRA)	;0000 0111
+	;MOVE.B 0x53, (REG_MRA) 	;0101 0011
+	;MOVE.B 0x53, (REG_MRA)	;0000 0111
 	
 	; Set CSRA, 38.4k baud 
-	MOVE.B 0xC0, (REG_CRSA) 	;1100 0000
+	;MOVE.B 0xC0, (REG_CSRA) 	;1100 0000
 
 	; Set ACR, 38.4k Baud, Counter source crystal
-	MOVE.B 0x30, (REG_ACR)	;0011 0000
+	;MOVE.B 0x30, (REG_ACR)	;0011 0000
 
 	; Set IVR to first unused vector in table
-	MOVE.B 0xC0, (REG_IMR)
+	;MOVE.B 0xC0, (REG_IMR)
 
+FOREVER:
+	JMP INIT_UART
 	RTS
 
