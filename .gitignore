@@ -3,3 +3,5 @@
 *.fus
 *.jed
 *.pin
+*.xml
+*.test
