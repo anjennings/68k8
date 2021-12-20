@@ -30,20 +30,20 @@ SET_INT_VECT:
 ENABLE_UART_A:
 
         # Reset Commands
-        MOVE.B #0x10, REG_CRA   ;0001 0000 Reset MRA
-        MOVE.B #0x20, REG_CRA   ;0010 0000 Reset RX
-        MOVE.B #0x30, REG_CRA   ;0011 0000 Reset TX
-        MOVE.B #0x40, REG_CRA   ;0100 0000 Reset Error Status
+        MOVE.B #0x20, REG_CRA   ;0001 0000 Reset RX
+        MOVE.B #0x30, REG_CRA   ;0010 0000 Reset TX
+        MOVE.B #0x10, REG_CRA   ;0011 0000 Reset MRA
+        #MOVE.B #0x40, REG_CRA   ;0100 0000 Reset Error Status
 
         ; SET MRA 1/2, no parity, 8 bit, normal mode, 1 stop bit
-        MOVE.B #0x53, REG_MRA   ;0101 0011
+        MOVE.B #0x13, REG_MRA   ;0001 0011
         MOVE.B #0x07, REG_MRA   ;0000 0111
 
-        ; Set CSRA, 38.4k baud 
-        MOVE.B #0xC0, REG_CSRA  ;1100 0000
+        ; Set CSRA, 9600 baud 
+        MOVE.B #0xBB, REG_CSRA  ;1011 1011
 
         ; Set ACR, 38.4k Baud, Counter source crystal
-        MOVE.B #0x30, REG_ACR   ;0011 0000
+        ;MOVE.B #0x30, REG_ACR   ;0011 0000
 
         ; Enable TX & RX
         MOVE.B #0x05, REG_CRA   ;0000 0101      
