@@ -13,4 +13,4 @@ hex:	a.out
 	hexdump -C a.out > a.hex
 
 clean:
-	rm -f $(FILE).L68 $(FILE).S68 a.out
+	rm -f $(FILE).L68 $(FILE).S68 a.out *.bin *.hex
