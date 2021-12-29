@@ -19,8 +19,11 @@ void setup() {
 
 void loop() {
   if(mySerial.available()){
-    Serial.print("From 68681:");
-    Serial.print(mySerial.read(), HEX);
-    Serial.print("\n");
+    uint8_t value = mySerial.read();
+    if (value <= 127) {
+      Serial.print("From 68681:");
+      Serial.print(value, HEX);
+      Serial.print("\n");
+    }
   }
 }
