@@ -22,22 +22,16 @@
 .long   GEN_V           ; Reserved
 .long   GEN_V           ; Reserved
 .long   GEN_V           ; Reserved
-.long   GEN_V           ; Spurious Int
-.long   GEN_V           ; IRQ Level 1
-.long   GEN_V           ; IRQ Level 2
-.long   GEN_V           ; IRQ Level 3
-.long   GEN_V           ; IRQ Level 4
-.long   GEN_V           ; IRQ Level 5
-.long   GEN_V           ; IRQ Level 6
-.long   GEN_V           ; IRQ Level 7
-.long   GEN_V           ; TRAP 0
-.long   GEN_V           ; TRAP 1
-.long   GEN_V           ; TRAP 2
-.long   GEN_V           ; TRAP 3
-.long   GEN_V           ; IRQ Level 4
-.long   GEN_V           ; IRQ Level 5
-.long   GEN_V           ; IRQ Level 6
-.long   GEN_V           ; IRQ Level 7
+
+.long   GEN_V           ; Spurious Int (Unknown Device)
+.long   GEN_V		; IRQ Level 1 (Disabled)
+.long   GEN_V           ; IRQ Level 2 (Nothing
+.long   GEN_V		; IRQ Level 3 (Disabled)
+.long   GEN_V           ; IRQ Level 4 (Disabled)
+.long   GEN_V           ; IRQ Level 5 (DUART)
+.long   GEN_V           ; IRQ Level 6 (Disabled)
+.long   GEN_V           ; IRQ Level 7 (Nothing)
+
 .long   GEN_V           ; TRAP 0
 .long   GEN_V           ; TRAP 1
 .long   GEN_V           ; TRAP 2

@@ -10,11 +10,17 @@ INIT:
         BSR CLR_OUTP
 
         ; Enablue UART A
-        BSR ENABLE_UART_A
+        ; BSR ENABLE_UART_A
+
+	MOVE.B #0x00, D0
+	BSR SET_INT_VECT
+
+	; Enable Counter
+	BSR INIT_TIMER
 
 LOOP:
-        MOVE.B #0x4D, D0
-        BSR PUTC_POLL
+	;MOVE.B #65, D0
+        ;BSR PUTC_POLL_A
         JMP LOOP
         RTS
 

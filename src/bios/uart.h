@@ -12,7 +12,7 @@
 .equ    REG_ISR,        PERP_BASE + 0xA         ; (R) Interrupt Status
 .equ    REG_IMR,        PERP_BASE + 0xA         ; (W) Interrupt Mask
 .equ    REG_CTU,        PERP_BASE + 0xC         ; (R) Counter Upper Byte
-.equ    REG_CRUR,       PERP_BASE + 0xC         ; (W) Counter Upper Byte Preset
+.equ    REG_CTUR,       PERP_BASE + 0xC         ; (W) Counter Upper Byte Preset
 .equ    REG_CTL,        PERP_BASE + 0xE         ; (R) Counter Lower Byte
 .equ    REG_CTLR,       PERP_BASE + 0xE         ; (W) Counter Lower Byte Preset
 .equ    REG_MRB,        PERP_BASE + 0x10        ; Mode Register B 
