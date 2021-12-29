@@ -9,6 +9,8 @@
 .equ	SPI_AUX3_CS,		0x40
 .equ	SPI_AUX4_CS,		0x80
 
+.equ	SPI_DIS_ALL,		0xFC		;Disable all 
+
 SPI_CLK_LOW:
 	MOVE.B #SPI_CLK, D0
 	BSR CLR_OUTP
@@ -29,3 +31,8 @@ SPI_MOSI_HIGH:
 	BSR SET_OUTP
 	RTS
 
+SPI_READ_MISO:
+	MOVE.B REG_INP, D0
+	ANDI #0x01, D0
+	RTS
+ 
