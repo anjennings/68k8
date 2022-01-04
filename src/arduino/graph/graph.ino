@@ -1,17 +1,13 @@
-// Generic analogue measurement
-
-#define BAUD    115200
-#define APIN    A0
-#define DELAY   5
+int analogPin = A3; // potentiometer wiper (middle terminal) connected to analog pin 3
+                    // outside leads to ground and +5V
+int val = 0;  // variable to store the value read
 
 void setup() {
-  // initialize the serial communication:
-  Serial.begin(BAUD);
-  while(!Serial){};
-  Serial.println("Starting...\n");
+  Serial.begin(9600);           //  setup serial
 }
 
 void loop() {
-  Serial.println(analogRead(APIN));
-  delay(DELAY);
+  val = analogRead(analogPin);  // read the input pin
+  Serial.println(val);          // debug value
+  delay(10);
 }
