@@ -3,6 +3,9 @@
 ; Locations of each area of BIOS
 .include "locations.h"
 
+; Macros
+.include "macros.s"
+
 ; Vector Table (0x000-3FF)
 .org V_TABLE
 .include "vectors.s"

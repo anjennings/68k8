@@ -6,4 +6,4 @@
 .equ	SPI_SRS,	0x01400		;SPI Routines
 .equ	SROM_SRS,	0x01800		;Serial EEPROM Routines
 .equ	CNT_SRS,	0x01B00		;Counter/Timer Routines
-.equ    INIT_SP,        0xB0000		;Initial SP
+.equ    INIT_SP,        0xF8000		;Initial SP
