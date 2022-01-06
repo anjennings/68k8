@@ -2,25 +2,25 @@ INIT:
 
         ; Disable all interrupts
         MOVE.B #0, D0
-        BSR SET_INT_MASK
+        JSR SET_INT_MASK
 
 	; Clear AUX LEDs
-        BSR INIT_OUTP
+        JSR INIT_OUTP
         MOVE.B #0xFF, D0
-        BSR CLR_OUTP
+        JSR CLR_OUTP
 
         ; Enablue UART A
-        ; BSR ENABLE_UART_A
+        ; JSR ENABLE_UART_A
 
 	MOVE.B #0x00, D0
-	BSR SET_INT_VECT
+	JSR SET_INT_VECT
 
 	; Enable Counter
-	BSR INIT_TIMER
+	JSR INIT_TIMER
 
 LOOP:
 	;MOVE.B #65, D0
-        ;BSR PUTC_POLL_A
+        ;JSR PUTC_POLL_A
         JMP LOOP
         RTS
 
