@@ -44,13 +44,14 @@ ENABLE_UART_A:
         MOVE.B #0x20, REG_CRA   ;0001 0000 Reset RX
         MOVE.B #0x30, REG_CRA   ;0010 0000 Reset TX
         MOVE.B #0x10, REG_CRA   ;0011 0000 Reset MRA
+	MOVE.B #0x40, REG_CRA	;Reset Error Status
 
-        ; SET MRA 1/2, no parity, 8 bit, normal mode, 1 stop bit
+        ; SET MRA 1&2, no parity, 8 bit, normal mode, double stop bit
         MOVE.B #0x13, REG_MRA   ;0001 0011
         MOVE.B #0x07, REG_MRA   ;0000 0111
 
         ; Set CSRA, 9600 baud 
-        MOVE.B #0x4B, REG_CSRA  ;0100 1011
+        MOVE.B #0xCC, REG_CSRA  ;1011 1011
 
         ; Enable TX & RX
         MOVE.B #0x05, REG_CRA   ;0000 0101
@@ -71,13 +72,14 @@ ENABLE_UART_B:
         MOVE.B #0x20, REG_CRB   ;0001 0000 Reset RX
         MOVE.B #0x30, REG_CRB   ;0010 0000 Reset TX
         MOVE.B #0x10, REG_CRB   ;0011 0000 Reset MRB
+	MOVE.B #0x40, REG_CRB	;Reset Error Status
 
         ; SET MRA 1/2, no parity, 8 bit, normal mode, 1 stop bit
         MOVE.B #0x13, REG_MRB   ;0001 0011
         MOVE.B #0x07, REG_MRB   ;0000 0111
 
         ; Set CSRA, 9600 baud 
-        MOVE.B #0xBB, REG_CSRB  ;1011 1011
+        MOVE.B #0xCC, REG_CSRB  ;1011 1011
 
         ; Enable TX & RX
         MOVE.B #0x05, REG_CRA   ;0000 0101

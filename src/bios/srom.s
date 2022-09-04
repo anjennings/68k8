@@ -100,17 +100,18 @@ SROM_READ_STATUS:
 		RTS
 
 # Read single byte
-# D0.W = Address
+# D1.W = Address
 # Returns value in D0.B
 SROM_READ_BYTE:
-		PUSH.W D0		; Save Address
+		PUSH.W D1
 		BSR SROM_ENABLE		; Enable rom
 		MOVE.B #SROM_READ, D0
 		BSR SROM_SEND_BYTE	; Send read command
-		POP.W D0
+		MOVE.W D1, D0		; Move address
 		BSR SROM_SEND_ADDR	; Send address
 		BSR SROM_GET_BYTE	; Get byte
 		PUSH.B D0		; Save byte
 		BSR SROM_DISABLE	; Disable rom
 		POP.B D0		; Pop byte
+		POP.W D1
 		RTS
