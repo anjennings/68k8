@@ -1,6 +1,6 @@
 # Path to commandline gal assembler
 CC = "/home/aidan/GALasm/src/galasm"
-PROG = "minipro"
+PROG = "/home/aidan/minipro/minipro"
 
 SRC = logic
 

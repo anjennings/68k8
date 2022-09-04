@@ -1,0 +1,53 @@
+; Generic SPI subroutines
+
+.equ	SPI_CLK,		0x01		; 
+.equ	SPI_MOSI,		0x02		; Data Out
+.equ	SPI_ROM_CS,		0x04		; SROM Select
+.equ	SPI_SD_CS,		0x08		; SD Card Select
+.equ	SPI_AUX1_CS,		0x10
+.equ	SPI_AUX2_CS,		0x20
+.equ	SPI_AUX3_CS,		0x40
+.equ	SPI_AUX4_CS,		0x80
+
+.equ 	SPI_MISO_MASK,		0x01
+
+.equ	SPI_DIS_ALL,		0xFC		;Disable all 
+
+SPI_CLK_LOW:
+	MOVE.B #SPI_CLK, D0
+	JSR CLR_OUTP
+	RTS
+
+SPI_CLK_HIGH:
+	MOVE.B #SPI_CLK, D0
+	JSR SET_OUTP
+	RTS
+
+SPI_MOSI_LOW:
+	MOVE.B #SPI_MOSI, D0
+	JSR CLR_OUTP
+	RTS
+
+SPI_MOSI_HIGH:
+	MOVE.B #SPI_MOSI, D0
+	JSR SET_OUTP
+	RTS
+
+; Set mosi to value of D0[7]
+SPI_MOSI_MSB:
+	PUSH.B D0
+	ANDI #0x80, D0
+	JSR SET_OUTP
+	NOT D0
+	ANDI #0x80, D0
+	JSR CLR_OUTP
+	POP.B D0
+	RTS	
+
+
+; Read MISO into D0[0]
+SPI_READ_MISO:
+	MOVE.B REG_INP, D0
+	ANDI #SPI_MISO_MASK, D0
+	RTS
+ 

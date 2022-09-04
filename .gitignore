@@ -1,7 +1,10 @@
-
+*.S68
+*.L68
+a.out
 *.chp
 *.fus
 *.jed
 *.pin
 *.xml
 *.test
+*.hex
